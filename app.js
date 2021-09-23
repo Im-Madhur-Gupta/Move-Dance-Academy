@@ -15,4 +15,6 @@ app.get("/contact",(req,res)=>{
     res.status(200).render("contact.pug",params)
 });
 
-app.listen(80,()=>{console.log("Server has started...........");})
+const port = process.env.PORT || 3000;
+app.listen(port);
+console.log(`listening on http://localhost:${port}`);
